@@ -18,7 +18,7 @@
 PRODUCT_RELEASE_NAME := lmi
 DEVICE_PATH := device/xiaomi/lmi
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
@@ -36,3 +36,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
 
+PRODUCT_PACKAGES += fastbootd
